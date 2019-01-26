@@ -33,7 +33,7 @@ public class ClassController {
 	@FXML
 	private ComboBox idEtudiant;
 	
-	Map<Integer, ArrayList<CsvDate>> map = new HashMap<Integer, ArrayList<CsvDate>>();
+	Map<String, ArrayList<CsvDate>> map = new HashMap<String, ArrayList<CsvDate>>();
 	int compteur = 0;
 	
 	private static final Logger Log = Logger.getLogger(ClassController.class.getName());
@@ -46,14 +46,15 @@ public class ClassController {
 			CSVParser p = ClassController.buildCSVParser();
 			for(CSVRecord r : p) {
 				compteur++;
-				int id = Integer.parseInt(r.get(0));
+				String s = r.get(0);
+				
 				String dteheure = r.get(1);
 				
 				
 				
-				if(!idEtudiant.getItems().contains(id))
+				if(!idEtudiant.getItems().contains(s))
 				{
-					idEtudiant.getItems().add(id);
+					idEtudiant.getItems().add(s);
 				}
 				
 				String[] tokens = dteheure.split(" ");
