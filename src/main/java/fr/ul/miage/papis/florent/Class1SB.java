@@ -11,7 +11,8 @@ import javafx.stage.Stage;
 public class Class1SB extends Application {
 
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws IOException {
+
 		Parent root = null;
 		try {
 			root = FXMLLoader.load(getClass().getResource("Class1.fxml"));
@@ -19,6 +20,7 @@ public class Class1SB extends Application {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
 		primaryStage.show();

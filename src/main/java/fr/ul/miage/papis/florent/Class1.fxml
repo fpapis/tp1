@@ -6,13 +6,12 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.ul.miage.papis.florent.ClassController">
    <children>
       <Button fx:id="btnAnalyser" layoutX="270.0" layoutY="148.0" mnemonicParsing="false" onAction="#analyserFichier" text="Analyser" />
       <DatePicker fx:id="dateDebut" layoutX="96.0" layoutY="100.0" />
       <DatePicker fx:id="dateFin" layoutX="331.0" layoutY="100.0" />
       <ComboBox fx:id="idEtudiant" layoutX="96.0" layoutY="53.0" prefWidth="150.0" />
-      <TextArea layoutY="194.0" prefHeight="207.0" prefWidth="600.0" />
+      <TextArea fx:id="ta" layoutY="194.0" prefHeight="207.0" prefWidth="600.0" />
    </children>
 </AnchorPane>
