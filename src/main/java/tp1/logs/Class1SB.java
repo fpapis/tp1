@@ -1,4 +1,4 @@
-package fr.ul.miage.papis.florent;
+package tp1.logs;
 
 import java.io.IOException;
 
@@ -20,7 +20,7 @@ public class Class1SB extends Application {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
 		primaryStage.show();

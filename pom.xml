@@ -49,6 +49,29 @@
   				</execution>
   			</executions>
   		</plugin>
+  		
+  		<plugin>
+  			<groupId>org.codehaus.mojo</groupId>
+  			<artifactId>appassembler-maven-plugin</artifactId>
+  			<version>1.10</version>
+  			<configuration>
+  				<assembleDirectory>${project.basedir}/scripts</assembleDirectory>
+  				<programs>
+  					<program>
+  					<mainClass>tp1.logs.Class1SB</mainClass>
+  					<id>AnalyseLogs</id>
+  					</program>
+  				</programs>
+  			</configuration>
+  			<executions>
+  				<execution>
+  					<phase>package</phase>
+  					<goals>
+  						<goal>assemble</goal>
+  					</goals>
+  				</execution>
+  			</executions>
+  		</plugin>
   	
   	</plugins>
   </build>
